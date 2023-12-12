@@ -1,19 +1,12 @@
 site_name: stozn的小站
 
-repo_url: https://github.com/stozn/blog
-repo_name: stozn/blog
-edit_uri: edit/main/docs/
-
 theme:
   name: material
   logo: assets/logo.jpg
   favicon: assets/logo.jpg
   language: zh
   font: false
-  icon:
-    repo: fontawesome/brands/github
-    edit: material/pencil 
-    view: material/eye
+
     
   palette: 
     - media: "(prefers-color-scheme: light)"
@@ -38,7 +31,6 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.top
-    - content.action.edit
     
 plugins:
   - offline
