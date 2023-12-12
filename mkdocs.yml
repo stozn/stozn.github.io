@@ -1,1 +1,56 @@
-site_name: My Docs
+site_name: stozn的小站
+
+repo_url: https://github.com/stozn/blog
+repo_name: stozn/blog
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.jpg
+  favicon: assets/logo.jpg
+  language: zh
+  font: false
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
+    
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: 切换到夜间模式
+
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换到日间模式
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - content.action.edit
+    
+plugins:
+  - offline
+  - blog:
+      blog_dir: .
+  - search
+
+extra:
+  version:
+    provider: mike
+
+
+# nav:
+#   - Blog:
+#     - blog/index.md
