@@ -1,8 +1,11 @@
 ---
 date: 2023-01-31 
 categories:
-  - Hello
-  - World
+  - 常用工具
+tags:
+  - conda
+  - python
+  - 镜像源
 ---
 
 # Hello world!
