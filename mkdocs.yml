@@ -1,15 +1,12 @@
 site_name: stozn的小站
 
-
-
-    
-
 theme:
   name: material
   logo: assets/logo.jpg
   favicon: assets/logo.jpg
   language: zh
-  font: false
+  font:
+    code: Roboto Mono
 
   palette: 
     - media: "(prefers-color-scheme: light)"
@@ -69,4 +66,4 @@ markdown_extensions:
 
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/extra.css

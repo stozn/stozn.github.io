@@ -19,8 +19,8 @@ echo "Hello World"    # 输出 Hello World
 要执行这个脚本，我们需要将其保存为一个 .sh 文件，并赋予执行权限：
 
 ```bash
-$ chmod +x helloworld.sh    # 赋予执行权限
-$ ./helloworld.sh    # 运行脚本
+chmod +x helloworld.sh    # 赋予执行权限
+./helloworld.sh    # 运行脚本
 ```
 
 执行结果应该是输出了 Hello World。
@@ -28,8 +28,8 @@ $ ./helloworld.sh    # 运行脚本
 除了直接运行脚本，还可以通过以下方式执行：
 
 ```bash
-$ bash helloworld.sh
-$ sh helloworld.sh
+bash helloworld.sh
+sh helloworld.sh
 ```
 
 ## 二、Shell 变量和字符串操作
