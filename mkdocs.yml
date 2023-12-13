@@ -1,5 +1,9 @@
 site_name: stozn的小站
 
+
+
+    
+
 theme:
   name: material
   logo: assets/logo.jpg
@@ -7,18 +11,16 @@ theme:
   language: zh
   font: false
 
-    
   palette: 
     - media: "(prefers-color-scheme: light)"
-      primary: black
       scheme: default
       toggle:
         icon: material/brightness-7 
         name: 切换到夜间模式
 
     - media: "(prefers-color-scheme: dark)"
-      primary: black
       scheme: slate
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: 切换到日间模式
@@ -28,21 +30,43 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
-    - navigation.expand
-    - navigation.path
+    - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.path
     - navigation.top
+    - content.code.copy
+    - content.tabs.link
     
 plugins:
-  - offline
-  - blog:
-      blog_dir: .
+  # - offline
+  # - blog: 
+  #     blog_dir: .
+  #     blog_toc: true
+  #     archive: false
+  #     post_url_format: "{slug}"
+  #     categories_toc: true
+  #     categories_allowed:
+  #       - 常用工具
+  #       - 网络相关
   - search
 
-extra:
-  version:
-    provider: mike
+markdown_extensions:
+  - pymdownx.highlight:
+      auto_title: true
+      anchor_linenums: true
+      linenums: true
+      line_spans: __span
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 
-# nav:
-#   - Blog:
-#     - blog/index.md
+extra_css:
+  - stylesheets/extra.css
