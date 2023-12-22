@@ -9,7 +9,39 @@
 
 ![](http://image.thum.io/get/https://www.runoob.com/python3/python3-dictionary.html)
 
--- 待完善 --
+### [**各大语言官方文档**](https://tool.oschina.net/apidocs)
+
+要全面深入的了解一门编程语言，最好的办法就是去看它们的官方文档。这些文档通常不仅有详细的语法和库说明，还会有对应的入门教程。  
+
+以下是一些常见语言的文档：
+
+1. C/C++: https://zh.cppreference.com
+2. Java: https://www.oracle.com/cn/java/technologies/java-se-api-doc.html
+3. Python: https://docs.python.org/zh-cn/3/
+4. 前端三件套（HTML\CSS\JS）: https://developer.mozilla.org/zh-CN/docs/Web
+5. PHP: https://www.php.net/manual/zh/index.php
+
+未列出的语言可自行google对应的文档
+
+### [**B站大学**](https://www.bilibili.com/)
+
+众所周知，Bilibili是世界上最好的大学[doge]，你可以在这里享受到优质的课程。包括但不限于大中小学课程、艺术、健身、厨艺、DIY等课程。当然，编程也不例外，你可以在上面找到很多的编程课程，一般直接选播放量最高的即可（它可能不是最好的，但一般也不会差）。
+
+![](http://image.thum.io/get/https://search.bilibili.com/all?keyword=C%2B%2B)
+
+### [**MOOC**](https://www.icourse163.org/)
+
+MOOC平台有很多免费的名校公开课（考不上也能白嫖他们的课，血赚），也可以在这里学习。
+
+![](http://image.thum.io/get/https://www.icourse163.org/search.htm?search=java#/)
+
+### [**网易公开课**](https://open.163.com/)
+
+和MOOC差不多，特色是有很多国外高校的公开课程（B站也有搬运的）。
+
+![](http://image.thum.io/get/https://open.163.com/newview/search/mit)
+
+
 
 
 ## 算法
