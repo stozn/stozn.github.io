@@ -8,9 +8,9 @@ developing...
 
     * 文章左右两侧有导航和目录，可以快速跳转
 
-    * 文章中的网站截图采用的是[**tumb.io**](https://www.thum.io/)的网站截图API，也就是它实时加载目标页面并截图返回的，如下面的截图
+    * 文章中的网站截图采用的是[**tumb.io**](https://www.thum.io/)的网站截图API
 
-    * 这个站点采用的是[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)搭建，这个站点的[**Github仓库**](https://github.com/stozn/stozn.github.io)
+    * 这个站点采用的是[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)搭建
 
 Just for fun.
 
