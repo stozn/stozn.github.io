@@ -15,3 +15,6 @@ developing...
 Just for fun.
 
 2024年3月21日 添加了资源网站
+
+
+2025年4月8日 搬运 [小林 X 图解计算机](https://stozn.github.io/CS-Base/)
