@@ -1,0 +1,1069 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../2.cpp-stl/">
+      
+      
+      <link rel="icon" href="../../assets/logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Git - stozn的小站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="stozn的小站" class="md-header__button md-logo" aria-label="stozn的小站" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            stozn的小站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="切换到日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  GPT的速成教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/1.program/" class="md-tabs__link">
+          
+  
+  
+  学习网站
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="stozn的小站" class="md-nav__button md-logo" aria-label="stozn的小站" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpg" alt="logo">
+
+    </a>
+    stozn的小站
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    GPT的速成教程
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GPT的速成教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是 Git？为什么要用 Git？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、Git 的基本原理和概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、Git 的安装和配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、创建 Git 仓库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、添加、修改、删除文件并提交到 Git 仓库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、查看提交历史、版本回退与撤销修改
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、分支管理：创建、合并、删除分支
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、远程仓库和协作开发
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、深入学习 Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、常见的 Git 工具介绍
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.cpp-stl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ STL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习网站
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            学习网站
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/1.program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    编程与算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/2.ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是 Git？为什么要用 Git？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、Git 的基本原理和概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、Git 的安装和配置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、创建 Git 仓库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、添加、修改、删除文件并提交到 Git 仓库
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、查看提交历史、版本回退与撤销修改
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、分支管理：创建、合并、删除分支
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、远程仓库和协作开发
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、深入学习 Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、常见的 Git 工具介绍
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git">Git</h1>
+<p>本教程旨在帮助初学者了解 Git 基础知识，介绍 Git 的概念和操作，以及一些常用的 Git 工具和高级操作。</p>
+<h2 id="git-git">一、什么是 Git？为什么要用 Git？</h2>
+<p>Git 是一种分布式版本控制工具，可以管理计算机上的文件和代码。使用 Git 可以进行版本控制，让多人协作开发更容易，也可以方便地撤销修改、查看历史记录等。</p>
+<p>传统的版本控制系统如 CVS 或 SVN 都是集中式的，即所有代码都保存在一个中央服务器上，如果中央服务器出现问题，将导致整个代码库不可用。而 Git 是一种分布式版本控制系统，每个开发者都有自己的本地仓库，可以进行提交、修改、合并等操作，即使中央服务器出现问题，也不会影响每个开发者的本地仓库。</p>
+<h2 id="git_1">二、Git 的基本原理和概念</h2>
+<p>Git 具有以下概念：</p>
+<ul>
+<li>版本控制：Git 能够跟踪和管理文件的修改历史，可以恢复旧版文件，同时也能防止因意外修改而丢失重要数据。</li>
+<li>仓库：保存文件和代码的地方，分为本地仓库和远程仓库。</li>
+<li>分支：指不同的代码分支，可以在不影响主分支的情况下进行单独的开发。</li>
+<li>提交：将修改过的文件保存到本地仓库中的操作。</li>
+</ul>
+<h2 id="git_2">三、Git 的安装和配置</h2>
+<ol>
+<li>下载并安装 Git（Windows）。</li>
+</ol>
+<p>可以从 Git 官网（https://git-scm.com/download/win）下载 Windows 版本的 Git，然后按照提示完成安装。</p>
+<ol>
+<li>配置用户信息（用户名和电子邮件）。</li>
+</ol>
+<p>每次 Git 提交都需要指定提交者的用户名和电子邮件地址。可以使用以下命令配置全局的用户名和邮件地址：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">   </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name Here&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="git_3">四、创建 Git 仓库</h2>
+<ol>
+<li>在本地创建一个新目录，并进入该目录。</li>
+</ol>
+<p>在命令行中执行以下命令，可以创建并进入新的目录：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">   </span>mkdir<span class="w"> </span>myrepo
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>myrepo
+</span></code></pre></div></td></tr></table></div>
+2. 通过 git init 命令将该目录初始化为 Git 仓库。</p>
+<p>执行以下命令将当前目录初始化为 Git 仓库：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w">   </span>git<span class="w"> </span>init
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="git_4">五、添加、修改、删除文件并提交到 Git 仓库</h2>
+<ol>
+<li>添加新文件：git add [file]。</li>
+</ol>
+<p>在 Git 中，添加新文件是分两步进行的。首先，使用 git add 命令将新文件添加到 Git 的暂存区域（stage）。例如，添加名为 <code>myfile.txt</code> 的文件，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">   </span>git<span class="w"> </span>add<span class="w"> </span>myfile.txt
+</span></code></pre></div></td></tr></table></div>
+该命令将 <code>myfile.txt</code> 添加到了 Git 的暂存区域。</p>
+<ol>
+<li>修改文件：修改本地文件，然后使用 git add [file] 添加到暂存区域。</li>
+</ol>
+<p>如果已经有文件存在于 Git 的仓库中，并且需要对该文件进行修改并提交，可以执行以下步骤：</p>
+<ul>
+<li>修改本地文件。</li>
+<li>使用 <code>git add</code> 命令将修改后的文件添加到 Git 的暂存区域。例如，修改名为 <code>myfile.txt</code> 的文件，可以执行以下命令：</li>
+</ul>
+<p>git add myfile.txt</p>
+<ol>
+<li>删除文件：git rm [file] 或者先手动删除文件，然后使用 git add [file] 将该操作添加到暂存区域。</li>
+</ol>
+<p>在 Git 中，删除文件也需要分两步进行。首先，使用 <code>git rm</code> 命令从 Git 的暂存区域中删除文件，然后使用 <code>git commit</code> 命令将删除操作提交到 Git 仓库中。例如，删除名为 <code>myfile.txt</code> 的文件，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">   </span>git<span class="w"> </span>rm<span class="w"> </span>myfile.txt
+</span></code></pre></div></td></tr></table></div>
+也可以先手动删除文件，然后使用 <code>git add</code> 命令将删除操作添加到暂存区域。例如，假设手动删除名为 <code>myfile.txt</code> 的文件，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">   </span>rm<span class="w"> </span>myfile.txt
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">   </span>git<span class="w"> </span>add<span class="w"> </span>myfile.txt
+</span></code></pre></div></td></tr></table></div>
+4. 提交修改：使用 git commit 命令将暂存区域的文件提交到 Git 仓库。</p>
+<p>每次提交前，需要将修改后的文件添加到 Git 的暂存区域。提交时，Git 会将暂存区域中的文件打包并保存为一个新的版本。例如，提交名为 <code>Initial commit</code> 的修改，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">   </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+此处的 <code>-m</code> 参数用于指定提交信息，可以根据需要进行修改。</p>
+<h2 id="_1">六、查看提交历史、版本回退与撤销修改</h2>
+<ol>
+<li>查看历史记录：git log 命令可以查看提交历史记录。</li>
+</ol>
+<p>Git 的提交历史记录保存在 Git 仓库的数据库中。可以使用 <code>git log</code> 命令查看提交历史记录。执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">   </span>git<span class="w"> </span>log
+</span></code></pre></div></td></tr></table></div>
+该命令将输出所有的提交历史记录。</p>
+<ol>
+<li>版本回退：使用 git reset 命令可以回退到某一个历史版本。</li>
+</ol>
+<p>如果需要回退到某一个历史版本，可以使用 <code>git reset</code> 命令。例如，回退到前一个版本，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="w">   </span>git<span class="w"> </span>reset<span class="w"> </span>HEAD~
+</span></code></pre></div></td></tr></table></div>
+3. 撤销修改：使用 git checkout -- [file] 命令可以撤销指定文件的修改。</p>
+<p>如果对一个文件进行了修改，但是不想将该修改提交到 Git 仓库中，可以使用 <code>git checkout --</code> 命令。例如，撤销已经修改的名为 <code>myfile.txt</code> 的文件，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>--<span class="w"> </span>myfile.txt
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="_2">七、分支管理：创建、合并、删除分支</h2>
+<ol>
+<li>创建新分支：git branch [branch] 命令创建一个新分支。</li>
+</ol>
+<p>在 Git 中，每个分支都是指向一个提交对象的指针。可以使用 <code>git branch</code> 命令创建新分支。例如，创建名为 <code>mybranch</code> 的新分支，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="w">   </span>git<span class="w"> </span>branch<span class="w"> </span>mybranch
+</span></code></pre></div></td></tr></table></div>
+2. 切换分支：git checkout [branch] 命令切换到指定分支。</p>
+<p>使用 <code>git checkout</code> 命令可以在不同的分支之间进行切换。例如，切换到名为 <code>mybranch</code> 的分支，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>mybranch
+</span></code></pre></div></td></tr></table></div>
+3. 合并分支：在目标分支上使用 git merge [branch] 命令，合并其他分支的代码。</p>
+<p>在 Git 中，合并分支是将两个或多个分支的修改组合起来。在目标分支上使用 <code>git merge</code> 命令，可以将其他分支的修改合并到目标分支中。例如，在当前分支上将名为 <code>mybranch</code> 的分支合并到当前分支，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w">   </span>git<span class="w"> </span>merge<span class="w"> </span>mybranch
+</span></code></pre></div></td></tr></table></div>
+4. 删除分支：使用 git branch -d [branch] 命令删除指定分支。</p>
+<p>如果不需要某个分支了，可以使用 <code>git branch -d</code> 命令删除该分支。例如，删除名为 <code>mybranch</code> 的分支，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="w">   </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>mybranch
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="_3">八、远程仓库和协作开发</h2>
+<ol>
+<li>添加远程仓库：使用 git remote add [name] [url] 命令添加远程仓库的 URL 地址。</li>
+</ol>
+<p>可以使用 <code>git remote add</code> 命令添加远程仓库，例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="w">   </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/username/repo.git
+</span></code></pre></div></td></tr></table></div>
+2. 推送本地代码到远程仓库：使用 git push [remote] [branch] 命令将本地仓库代码推送到远程仓库。</p>
+<p>在将本地仓库的代码推送到远程仓库之前，需要将更改提交到本地仓库。之后，使用 <code>git push</code> 命令将其推送到远程仓库。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="w">   </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</span></code></pre></div></td></tr></table></div>
+3. 拉取远程仓库的更新：使用 git pull 命令拉取远程仓库的更新。</p>
+<p>在多人协作开发中，其他开发者可能会对远程仓库进行更改，因此需要及时拉取远程仓库的更新。可以使用 <code>git pull</code> 命令拉取远程仓库的最新更新。例如：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="w">   </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master
+</span></code></pre></div></td></tr></table></div>
+4. 解决冲突</p>
+<p>当多个人修改同一文件时，可能会产生冲突，需要手动合并代码。如果在更新代码时出现冲突，Git 会提示你需要手动解决冲突。可以使用以下命令解决冲突：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="w">   </span>git<span class="w"> </span>mergetool
+</span></code></pre></div></td></tr></table></div></p>
+<h2 id="git_5">九、深入学习 Git</h2>
+<ol>
+<li>标签：使用 git tag [tag] 命令创建标签，可以方便地查看特定版本的代码。</li>
+</ol>
+<p>标签是指向某个特定提交对象的指针，可以用来标记重要的提交或版本。可以使用 <code>git tag</code> 命令创建标签。例如，创建一个名为 <code>v1.0</code> 的标签，并将其指向最新的提交对象，可以执行以下命令：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="w">   </span>git<span class="w"> </span>tag<span class="w"> </span>v1.0
+</span></code></pre></div></td></tr></table></div>
+2. 子模块：可以在一个 Git 仓库的目录中引用另一个 Git 仓库的代码。</p>
+<p>Git 中的子模块是一个独立的 Git 仓库，可以作为主 Git 仓库的子目录使用。可以使用以下命令添加子模块：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="w">   </span>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/username/repo.git<span class="w"> </span>path/to/submodule
+</span></code></pre></div></td></tr></table></div>
+1. Git 工作流：通过规定团队的工作流程，可以更好地协作开发。</p>
+<p>Git 工作流指的是使用 Git 进行多人协作开发的流程。常见的 Git 工作流包括中心式工作流、功能分支工作流、Git Flow 等。</p>
+<h2 id="git_6">十、常见的 Git 工具介绍</h2>
+<ol>
+<li>GUI 工具：TortoiseGit、SourceTree、GitKraken 等。</li>
+</ol>
+<p>GUI 工具可以提供更直观的界面和更丰富的功能，比如可以方便地可视化查看提交历史记录、分支等。</p>
+<ol>
+<li>命令行工具：Linux 终端、Windows 命令提示符或 PowerShell 等。</li>
+</ol>
+<p>命令行工具可以提供更灵活的操作和更快的速度，适合熟练掌握 Git 的用户使用。</p>
+<ol>
+<li>插件：与 IDE 集成的 Git 插件，例如 Visual Studio Code 的 GitLens。</li>
+</ol>
+<p>插件可以在编写代码的同时操作 Git，方便快捷。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

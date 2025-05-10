@@ -1,0 +1,24 @@
+:root {
+  --top-color: #14171F;
+}
+
+.md-header {
+  background-color: var(--top-color);
+}
+
+.md-tabs {
+  background-color: var(--top-color);
+}
+
+.md-header {
+    background-color: #14171F;
+}
+
+.md-tabs {
+  background-color: #14171F;
+}
+
+.md-typeset {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+}
